@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mass: MyString
+  diameter: MyString
+  density: MyString
+  gravity: MyString
+  escape_velocity: MyString
+  rotation_period: MyString
+  day_lenght: MyString
+  distance_from_sun: MyString
+  perihelion: MyString
+  aphelion: MyString
+  orbital_period: MyString
+  orbital_velocity: MyString
+  orbital_Inclination: MyString
+  axis_inclination: MyString
+  weight: MyString
+  temperature: MyString
+  surface_pressure: MyString
+  atmospheric_composition: MyString
+  satellite: MyString
+  ring: MyString
+
+two:
+  name: MyString
+  mass: MyString
+  diameter: MyString
+  density: MyString
+  gravity: MyString
+  escape_velocity: MyString
+  rotation_period: MyString
+  day_lenght: MyString
+  distance_from_sun: MyString
+  perihelion: MyString
+  aphelion: MyString
+  orbital_period: MyString
+  orbital_velocity: MyString
+  orbital_Inclination: MyString
+  axis_inclination: MyString
+  weight: MyString
+  temperature: MyString
+  surface_pressure: MyString
+  atmospheric_composition: MyString
+  satellite: MyString
+  ring: MyString

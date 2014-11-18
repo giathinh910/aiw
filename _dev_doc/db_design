@@ -1,44 +1,47 @@
 PLANET
 
 #tên
-	name
+	name:string
 #khối lượng #10^24kg
-	mass
+	mass:string
 #đường kính #km
-	diameter
+	diameter:string
 #độ đặc #kg/m3
-	density
+	density:string
 #m/s2
-	gravity
+	gravity:string
 #tốc độ thoát khỏi lực hấp dẫn
-	escape_velocity
+	escape_velocity:string
 #chu kỳ tự quay
-	rotation_period
+	rotation_period:string
 #giờ
-	day_lenght
+	day_lenght:string
 #10^6km
-	distance_from_sun
+	distance_from_sun:string
 #điểm cận nhật #10^6km
-	perihelion
+	perihelion:string
 #điểm viễn nhật #10^6km
-	aphelion
+	aphelion:string
 #chu kỳ quay quanh mặt trời #ngày
-	orbital_period
+	orbital_period:string
 #vận tốc quỹ đạo  #km/s
-	orbital_velocity
+	orbital_velocity:string
 #độ nghiêng quỹ đạo #độ
-	orbital_Inclination
+	orbital_Inclination:string
 #độ nghiêng trục #độ
-	axis_inclination
+	axis_inclination:string
 #khối lượng #
-	weight
+	weight:string
 #độ C
-	temperature
+	temperature:string
 #áp suất khí quyển bề mặt #bars
-	surface_pressure
+	surface_pressure:string
 #thành phần khí quyển
-	atmospheric_composition
+	atmospheric_composition:string
 #số vệ tinh
-	satelite
+	satellite:string
 #có vành?
-	ring
+	ring:string
+
+
+rails g model Planet name:string mass:string diameter:string density:string gravity:string escape_velocity:string rotation_period:string day_lenght:string distance_from_sun:string perihelion:string aphelion:string orbital_period:string orbital_velocity:string orbital_Inclination:string axis_inclination:string weight:string temperature:string surface_pressure:string atmospheric_composition:string satellite:string ring:string

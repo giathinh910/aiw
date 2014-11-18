@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141101035728) do
+ActiveRecord::Schema.define(version: 20141118181220) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -45,6 +45,32 @@ ActiveRecord::Schema.define(version: 20141101035728) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "planets", force: true do |t|
+    t.string   "name"
+    t.string   "mass"
+    t.string   "diameter"
+    t.string   "density"
+    t.string   "gravity"
+    t.string   "escape_velocity"
+    t.string   "rotation_period"
+    t.string   "day_lenght"
+    t.string   "distance_from_sun"
+    t.string   "perihelion"
+    t.string   "aphelion"
+    t.string   "orbital_period"
+    t.string   "orbital_velocity"
+    t.string   "orbital_Inclination"
+    t.string   "axis_inclination"
+    t.string   "weight"
+    t.string   "temperature"
+    t.string   "surface_pressure"
+    t.string   "atmospheric_composition"
+    t.string   "satellite"
+    t.string   "ring"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
