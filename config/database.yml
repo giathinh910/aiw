@@ -7,23 +7,23 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  database: aiw2014
+  database: fit_aiw_2014
   username: root
   password: root
-  host: 127.0.0.1
-  port: 3306
+  host: localhost
 
 development:
   <<: *default
-  database: aiw2014
+  database: fit_aiw_2014
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: aiw2014
+  database: fit_aiw_2014
 
 production:
   <<: *default
-  database: aiw2014
+  database: fit_aiw_2014

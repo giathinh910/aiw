@@ -1,0 +1,44 @@
+PLANET
+
+#tên
+	name
+#khối lượng #10^24kg
+	mass
+#đường kính #km
+	diameter
+#độ đặc #kg/m3
+	density
+#m/s2
+	gravity
+#tốc độ thoát khỏi lực hấp dẫn
+	escape_velocity
+#chu kỳ tự quay
+	rotation_period
+#giờ
+	day_lenght
+#10^6km
+	distance_from_sun
+#điểm cận nhật #10^6km
+	perihelion
+#điểm viễn nhật #10^6km
+	aphelion
+#chu kỳ quay quanh mặt trời #ngày
+	orbital_period
+#vận tốc quỹ đạo  #km/s
+	orbital_velocity
+#độ nghiêng quỹ đạo #độ
+	orbital_Inclination
+#độ nghiêng trục #độ
+	axis_inclination
+#khối lượng #
+	weight
+#độ C
+	temperature
+#áp suất khí quyển bề mặt #bars
+	surface_pressure
+#thành phần khí quyển
+	atmospheric_composition
+#số vệ tinh
+	satelite
+#có vành?
+	ring
