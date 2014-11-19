@@ -45,3 +45,20 @@ PLANET
 
 
 rails g model Planet name:string mass:string diameter:string density:string gravity:string escape_velocity:string rotation_period:string day_lenght:string distance_from_sun:string perihelion:string aphelion:string orbital_period:string orbital_velocity:string orbital_Inclination:string axis_inclination:string weight:string temperature:string surface_pressure:string atmospheric_composition:string satellite:string ring:string
+
+
+NATURAL SATELLITES
+#hành tinh
+	planet
+#năm phát hiện
+	year_discovered
+#người phát hiện
+	discoverer
+#khoảng cách tới hành tinh
+	distance_from_planet
+#đường kính
+	orbital_period
+#chi tiết
+	detail
+
+rails
