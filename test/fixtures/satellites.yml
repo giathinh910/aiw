@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  planet_id: 
+  year_discovered: MyString
+  discoverer: MyString
+  distance_from_planet: MyString
+  orbital_period: MyString
+  detail: MyString
+
+two:
+  planet_id: 
+  year_discovered: MyString
+  discoverer: MyString
+  distance_from_planet: MyString
+  orbital_period: MyString
+  detail: MyString

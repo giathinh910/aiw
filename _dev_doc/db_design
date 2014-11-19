@@ -48,17 +48,18 @@ rails g model Planet name:string mass:string diameter:string density:string grav
 
 
 NATURAL SATELLITES
+
 #hành tinh
 	planet
 #năm phát hiện
-	year_discovered
+	year_discovered:string
 #người phát hiện
-	discoverer
+	discoverer:string
 #khoảng cách tới hành tinh
-	distance_from_planet
+	distance_from_planet:string
 #đường kính
-	orbital_period
+	orbital_period:string
 #chi tiết
-	detail
+	detail:string
 
-rails
+rails g model satellite planet:references year_discovered:string discoverer:string distance_from_planet:string orbital_period:string detail:string
