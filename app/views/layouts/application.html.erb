@@ -1,18 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-  <title>AIW 2014 Starter Kit</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<!-- Basic need -->
+	<title>Astronomy</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<link rel="profile" href="">
+	<link rel="shortcut icon" href="images/favicon.ico">
+
+	<!-- Mobile specific meta -->
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="format-detection" content="telephone-no">
+
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
+
+<nav id="gt-main-nav">
+
+	<div class="nav-title"><span>Menu</span></div>
+
+	<form class="search" action="">
+		<input type="text">
+		<button type="submit"><i class="fa fa-search"></i></button>
+	</form>
+
+	<ul class="main-nav">
+		<li>
+			<a href="">Dữ liệu hệ mặt trời</a>
+			<ul class="sub-menu">
+				<li><a href="#">Sao Kim</a></li>
+				<li><a href="#">Sao Thủy</a></li>
+				<li><a href="#">Trái Đất</a></li>
+				<li><a href="#">Sao Hỏa</a></li>
+				<li><a href="#">Sao Thổ</a></li>
+				<li><a href="#">Sao Mộc</a></li>
+				<li><a href="#">Sao Hải Vương</a></li>
+				<li><a href="#">Sao Thiên Vương</a></li>
+				<li><a href="#">Sao Diêm Vương</a></li>
+			</ul>
+		</li>
+		<li><a href="">Bài viết</a></li>
+		<li><a href="">Giới thiệu</a></li>
+		<li><a href="">Liên hệ</a></li>
+	</ul>
+</nav>
+
 <!-- device notice - add later
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 -->
-
 <%= yield %>
+
+
+<footer id="gt-footer">
+	<div class="container">
+		<ul class="social">
+			<li><a href="#" class="fa fa-facebook"></a></li>
+			<li><a href="" class="fa fa-twitter"></a></li>
+			<li><a href="" class="fa fa-google-plus"></a></li>
+		</ul>
+		<div class="copyright">
+			<p>&copy; 2014 Astronomy. From HANU with <i class="fa fa-heart"></i></p>
+		</div>
+	</div>
+</footer>
 
 </body>
 </html>
