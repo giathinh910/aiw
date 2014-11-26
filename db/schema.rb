@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141126141307) do
+ActiveRecord::Schema.define(version: 20141126141956) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -78,6 +78,8 @@ ActiveRecord::Schema.define(version: 20141126141307) do
     t.string   "ring"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
+    t.string   "detail"
   end
 
   create_table "posts", force: true do |t|
@@ -98,6 +100,7 @@ ActiveRecord::Schema.define(version: 20141126141307) do
     t.string   "detail"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "avatar"
   end
 
   add_index "satellites", ["planet_id"], name: "index_satellites_on_planet_id", using: :btree
