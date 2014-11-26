@@ -14,5 +14,13 @@ ActiveAdmin.register Satellite do
   #   permitted
   # end
 
+  permit_params :name, :planet_id, :year_discovered, :discoverer, :distance_from_planet, :orbital_period, :avatar, :detail
+
+  index do
+    column "Tên", :name, :sortable => :price
+    column "Ngày tạo", :created_at
+    column "Ngày sửa gần nhất", :modified_at
+    actions
+  end
 
 end
