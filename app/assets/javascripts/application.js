@@ -11,4 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.browsers
+//= require smooth.scroll
+//= require jquery.parallax
 //= require custom
