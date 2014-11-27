@@ -1,0 +1,34 @@
+<header id="gt-header">
+	<button type="button" class="ht-navbar-toggle" data-target="#gt-main-nav">
+		<span class="sr-only">Toggle navigation</span>
+		<span class="icon-bar icon-bar-1"></span>
+		<span class="icon-bar icon-bar-2"></span>
+		<span class="icon-bar icon-bar-3"></span>
+	</button>
+	<h1 class="site-title"><a href="index.html">Astronomy</a></h1>
+	<p class="sub-site-title">Trang thông tin thiên văn học</p>
+	<div class="planet-avatar" style="background-image: url('http://localhost/www/aiw2014_astronomy/public/images/planet-8.png'); box-shadow: 0px 0px 100px rgba(255,255,255, 0.5);"></div>
+</header>
+
+<section id="gt-fact" class="gt-section">
+
+	<header id="gt-section-header">
+		<h2 class="section-title border"><span>Dữ liệu hệ mặt trời</span></h2>
+		<p class="section-sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi perspiciatis excepturi accusantium nesciunt, pariatur et voluptas vitae sit ad tempore nulla nobis maxime voluptates ratione minima dolor dolores porro consectetur!</p>
+	</header>
+
+	<div class="gt-section-content">
+		<% @planets.each do |planet| %>
+		<div class="entry">
+			<div class="entry-inner">
+				<div class="entry-media">
+					<img src="<%= planet.avatar %>" alt="">
+				</div>
+				<div class="entry-content">
+					<h3 class="title"><a href="fact-single.html" class="gt-button"><%= planet.name %></a></h3>
+				</div>
+			</div>
+		</div>
+		<% end %>
+	</div>
+</section>

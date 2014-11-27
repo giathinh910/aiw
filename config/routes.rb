@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'planet/all'
+  get 'planet/detail/:id' => 'planet#all'
+
   root 'home#index'
 
   get 'home/index'
