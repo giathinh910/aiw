@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'planet/all'
-  get 'planet/detail/:id' => 'planet#all'
+  get 'planet/detail/:id' => 'planet#detail'
 
   root 'home#index'
 

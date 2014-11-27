@@ -7,13 +7,13 @@
 	</button>
 	<h1 class="site-title"><a href="index.html">Astronomy</a></h1>
 	<p class="sub-site-title">Trang thông tin thiên văn học</p>
-	<div class="planet-avatar" style="background-image: url('images/low-poly-sun.png'); box-shadow: 0px 0px 100px rgba(255, 152, 48, 0.5);"></div>
+	<div class="planet-avatar" style="background-image: url(<%= @planet.avatar %>); box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.5);"></div>
 </header>
 
 <section id="gt-fact" class="gt-section">
 
 	<header id="gt-section-header">
-		<h2 class="section-title border"><span>Trái đất</span></h2>
+		<h2 class="section-title border"><span><%= @planet.name %></span></h2>
 		<p class="section-sub-title">Culpa et voluptatum, aliquam deserunt quibusdam facere odio.</p>
 	</header>
 
@@ -24,45 +24,102 @@
 					<table class="table">
 					<!-- <caption>Optional table caption.</caption> -->
 					<thead>
-					<tr>
-					<th>#</th>
-					<th>First Name</th>
-					<th>Last Name</th>
-					<th>Username</th>
-					</tr>
+						<tr>
+							<th>Tên</th>
+							<th>Thông số</th>
+						</tr>
 					</thead>
 					<tbody>
-					<tr>
-					<td>1</td>
-					<td>Mark</td>
-					<td>Otto</td>
-					<td>@mdo</td>
-					</tr>
-					<tr>
-					<td>2</td>
-					<td>Jacob</td>
-					<td>Thornton</td>
-					<td>@fat</td>
-					</tr>
-					<tr>
-					<td>3</td>
-					<td>Larry</td>
-					<td>the Bird</td>
-					<td>@twitter</td>
-					</tr>
+						<tr>
+							<td>Tên gọi</td>
+							<td><%= @planet.name %></td>
+						</tr>
+						<tr>
+							<td>Khối lượng (10<sup>24</sup> kg)</td>
+							<td><%= @planet.mass %></td>
+						</tr>
+						<tr>
+							<td>Đường kính (km)</td>
+							<td><%= @planet.diameter %></td>
+						</tr>
+						<tr>
+							<td>Độ đặc (kg/m<sup>3</sup>)</td>
+							<td><%= @planet.density %></td>
+						</tr>
+						<tr>
+							<td>m/s<sup>2</sup></td>
+							<td><%= @planet.gravity %></td>
+						</tr>
+						<tr>
+							<td>Vận tốc thoát khỏi lực hấp dẫn (km/s)</td>
+							<td><%= @planet.escape_velocity %></td>
+						</tr>
+						<tr>
+							<td>Chu kỳ tự quay (h)</td>
+							<td><%= @planet.rotation_period %></td>
+						</tr>
+						<tr>
+							<td>Độ dài ngày (h)</td>
+							<td><%= @planet.day_lenght %></td>
+						</tr>
+						<tr>
+							<td>K/c tới mặt trời (10<sup>6</sup> km)</td>
+							<td><%= @planet.distance_from_sun %></td>
+						</tr>
+						<tr>
+							<td>Điểm cận nhật (10<sup>6</sup> km)</td>
+							<td><%= @planet.perihelion %></td>
+						</tr>
+						<tr>
+							<td>điểm viễn nhật (10<sup>6</sup> km)</td>
+							<td><%= @planet.aphelion %></td>
+						</tr>
+						<tr>
+							<td>Chu kỳ quay quanh mặt trời (ngày)</td>
+							<td><%= @planet.orbital_period %></td>
+						</tr>
+						<tr>
+							<td>Vận tốc quỹ đạo  (km/s)</td>
+							<td><%= @planet.orbital_velocity %></td>
+						</tr>
+						<tr>
+							<td>Độ nghiêng quỹ đạo (độ)</td>
+							<td><%= @planet.orbital_Inclination %></td>
+						</tr>
+						<tr>
+							<td>Độ nghiêng trục (độ)</td>
+							<td><%= @planet.axis_inclination %></td>
+						</tr>
+						<tr>
+							<td>Khối lượng</td>
+							<td><%= @planet.weight %></td>
+						</tr>
+						<tr>
+							<td>Nhiệt độ (C)</td>
+							<td><%= @planet.temperature %></td>
+						</tr>
+						<tr>
+							<td>Áp suất khí quyển bề mặt (atm)</td>
+							<td><%= @planet.surface_pressure %></td>
+						</tr>
+						<tr>
+							<td>Thành phần khí quyển</td>
+							<td><%= @planet.atmospheric_composition %></td>
+						</tr>
+						<tr>
+							<td>Có vành?</td>
+							<td><%= @planet.ring %></td>
+						</tr>
+						<tr>
+							<td>Số vệ tinh</td>
+							<td><%= @planet.satellite %></td>
+						</tr>
 					</tbody>
 					</table>
 				</div>
 			</div>
 			<div class="entry-content">
-				<h3>Lịch sử hình thành</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente mollitia dolores ut nesciunt saepe minima numquam fugit, eligendi, odit nisi optio minus illo ea possimus repellat unde! Cumque, facere voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eaque voluptatum perspiciatis iusto laboriosam recusandae vel alias ab modi, sed accusantium velit sunt magni eius quis distinctio, odio aspernatur sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At officia, expedita inventore reiciendis nisi repudiandae autem similique incidunt, nesciunt iste laboriosam molestias amet vero eligendi! Cupiditate tempore sapiente hic saepe.</p>
-				<br />
-				<h3>Các giai đoạn</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente mollitia dolores ut nesciunt saepe minima numquam fugit, eligendi, odit nisi optio minus illo ea possimus repellat unde! Cumque, facere voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eaque voluptatum perspiciatis iusto laboriosam recusandae vel alias ab modi, sed accusantium velit sunt magni eius quis distinctio, odio aspernatur sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At officia, expedita inventore reiciendis nisi repudiandae autem similique incidunt, nesciunt iste laboriosam molestias amet vero eligendi! Cupiditate tempore sapiente hic saepe.</p>
-				<br />
-				<h3>Dự đoán tương lai</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente mollitia dolores ut nesciunt saepe minima numquam fugit, eligendi, odit nisi optio minus illo ea possimus repellat unde! Cumque, facere voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum eaque voluptatum perspiciatis iusto laboriosam recusandae vel alias ab modi, sed accusantium velit sunt magni eius quis distinctio, odio aspernatur sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. At officia, expedita inventore reiciendis nisi repudiandae autem similique incidunt, nesciunt iste laboriosam molestias amet vero eligendi! Cupiditate tempore sapiente hic saepe.</p>
+				<%= @planet.detail %>
 			</div>
 		</div>
 	</div>
