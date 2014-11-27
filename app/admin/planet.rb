@@ -46,7 +46,7 @@ permit_params :name, :mass, :diameter, :density, :gravity, :escape_velocity, :ro
       f.input :satellite
       f.input :ring
       f.input :avatar
-      f.input :detail
+      f.input :detail, :as => :ckeditor
     end
     f.actions
   end

@@ -22,4 +22,17 @@ ActiveAdmin.register Satellite do
     actions
   end
 
+  form do |f|
+    f.inputs "Chi tiết hành tinh" do
+      f.input :name
+      f.input :year_discovered
+      f.input :discoverer
+      f.input :distance_from_planet
+      f.input :orbital_period
+      f.input :avatar
+      f.input :detail, :as => :ckeditor
+    end
+    f.actions
+  end
+
 end

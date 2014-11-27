@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
   get 'planet/all'
   get 'planet/:id' => 'planet#detail'
 
