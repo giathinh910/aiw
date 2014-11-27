@@ -21,4 +21,34 @@ permit_params :name, :mass, :diameter, :density, :gravity, :escape_velocity, :ro
     column "Tên", :name, :sortable => :price
     actions
   end
+
+  form do |f|
+    f.inputs "Chi tiết hành tinh" do
+      f.input :name
+      f.input :mass
+      f.input :diameter
+      f.input :density
+      f.input :gravity
+      f.input :escape_velocity
+      f.input :rotation_period
+      f.input :day_lenght
+      f.input :distance_from_sun
+      f.input :perihelion
+      f.input :aphelion
+      f.input :orbital_period
+      f.input :orbital_velocity
+      f.input :orbital_Inclination
+      f.input :axis_inclination
+      f.input :weight
+      f.input :temperature
+      f.input :surface_pressure
+      f.input :atmospheric_composition
+      f.input :satellite
+      f.input :ring
+      f.input :avatar
+      f.input :detail
+    end
+    f.actions
+  end
+
 end
