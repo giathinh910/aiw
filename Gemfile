@@ -48,3 +48,6 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 
 gem 'paperclip'
 gem 'ckeditor'
+
+gem 'select2-rails'
+gem 'acts-as-taggable-on'
