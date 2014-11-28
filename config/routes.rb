@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
+  get 'satellite/all'
+
   get 'planet/all'
   get 'planet/:id' => 'planet#detail'
 
-  root 'home#index'
+  get 'satellite/:id' => 'satellite#detail'
 
+  root 'home#index'
   get 'home/index'
-  get 'home/sample'
+
+  mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

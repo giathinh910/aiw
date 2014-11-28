@@ -1,0 +1,49 @@
+<section id="gt-fact" class="gt-section">
+
+	<header id="gt-section-header">
+		<h2 class="section-title border"><span><%= @satellite.name %></span></h2>
+		<p class="section-sub-title">Culpa et voluptatum, aliquam deserunt quibusdam facere odio.</p>
+	</header>
+
+	<div class="gt-section-content">
+		<div class="entry-single">
+			<div class="entry-table">
+				<div class="table-responsive">
+					<table class="table">
+					<!-- <caption>Optional table caption.</caption> -->
+					<thead>
+						<tr>
+							<th colspan="2"><strong style="font-weight: bold;">THÔNG SỐ</strong></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Tên gọi</td>
+							<td><%= @satellite.name %></td>
+						</tr>
+						<tr>
+							<td>Năm phát hiện</td>
+							<td><%= @satellite.year_discovered %></td>
+						</tr>
+						<tr>
+							<td>Người phát hiện</td>
+							<td><%= @satellite.discoverer %></td>
+						</tr>
+						<tr>
+							<td>K/c tới hành tinh</td>
+							<td><%= @satellite.distance_from_planet %></td>
+						</tr>
+						<tr>
+							<td>Chu kì tự quay</td>
+							<td><%= @satellite.orbital_period %></td>
+						</tr>
+					</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="entry-content">
+				<%=raw @satellite.detail %>
+			</div>
+		</div>
+	</div>
+</section>
