@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'planet/all'
   get 'planet/:id' => 'planet#detail'
 
-  get 'satellite/:id' => 'satellite#detail'
+  get 'planet/satellite/:id' => 'satellite#detail'
 
   root 'home#index'
   get 'home/index'
