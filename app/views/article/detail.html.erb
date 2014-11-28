@@ -1,0 +1,30 @@
+<section id="gt-blog" class="gt-section">
+
+	<header id="gt-section-header">
+		<h2 class="section-title border"><span>Bài viết</span></h2>
+		<p class="section-sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi perspiciatis excepturi accusantium nesciunt, pariatur et voluptas vitae sit ad tempore nulla nobis maxime voluptates ratione minima dolor dolores porro consectetur!</p>
+	</header>
+
+	<div class="gt-section-content">
+		<div class="posts">
+			<article class="post">
+				<div class="post-header">
+					<h3 class="post-title"><%= @post.title %></h3>
+					<p class="meta user"><i class="fa fa-user"></i> Thinh Bui</p>
+					<p class="meta time"><i class="fa fa-clock-o"></i> <%= @post.created_at %></p>
+					<p class="meta category"><i class="fa fa-folder-open-o"></i> Sao diêm vương, Mặt trời</p>
+				</div>
+				<div class="post-content">
+					<div class="media-container">
+						<img src="<%= @post.feature_image %>" alt="">
+					</div>
+					<div class="brief">
+						<%=raw @post.content %>
+					</div>
+				</div>
+			</article>
+			<!-- /pagination -->
+		</div>
+		<!-- /posts -->
+	</div>
+</section>
