@@ -1707,7 +1707,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container, #gt-features, #gt-blog, #gt-fact {
-    width: 1170px;
+    width: 970px;
   }
 }
 
@@ -4875,9 +4875,6 @@ iframe {
   border-top: 49.35585px solid #be3f74;
 }
 
-#gt-blog {
-  max-width: 970px;
-}
 #gt-blog .gt-section-content {
   margin-left: -15px;
   margin-right: -15px;
@@ -5028,7 +5025,6 @@ iframe {
 }
 
 #gt-fact {
-  max-width: 970px;
   margin-bottom: 20px;
 }
 #gt-fact .gt-section-content {
