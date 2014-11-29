@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'article/all'
+  get 'article' => 'article#all'
   get 'article/detail'
   get 'article/detail/:id' => 'article#detail'
 
-  get 'planet/all'
+  get 'planet' => 'planet#all'
   get 'planet/:id' => 'planet#detail'
   get 'planet/satellite/:id' => 'satellite#detail'
 
