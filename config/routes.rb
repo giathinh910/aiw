@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'tags/:tag' => 'article#all', as: :tag
   get 'article' => 'article#all'
   get 'article/detail'
   get 'article/detail/:id' => 'article#detail'
+  get 'tags/detail/:id' => 'article#detail'
 
   get 'planet' => 'planet#all'
   get 'planet/:id' => 'planet#detail'
