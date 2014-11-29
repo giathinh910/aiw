@@ -14,11 +14,12 @@ ActiveAdmin.register Article do
   #   permitted
   # end
   
-  permit_params :title, :feature_image, :brief, :content
+  permit_params :title, :feature_image, :brief, :content, :tag_list
 
   index do
     column "Mã số", :id
     column "Tên", :title, :sortable => :id
+    column :tag_list
     actions
   end
 
@@ -27,6 +28,7 @@ ActiveAdmin.register Article do
       f.input :title
       f.input :feature_image
       f.input :brief
+      f.input :tag_list, :hint => 'Comma separated'
       f.input :content, :as => :ckeditor
     end
     f.actions
