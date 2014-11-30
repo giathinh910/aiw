@@ -12,7 +12,7 @@
 					<h3 class="post-title"><%= @post.title %></h3>
 					<p class="meta user"><i class="fa fa-user"></i> Thinh Bui</p>
 					<p class="meta time"><i class="fa fa-clock-o"></i> <%= @post.created_at %></p>
-					<p class="meta category"><i class="fa fa-folder-open-o"></i> Sao diêm vương, Mặt trời</p>
+					<p class="meta tag"><i class="fa fa-tag"></i> <%= raw @post.tag_list.map { |t| link_to t, tag_path(t) }.join(' ') %></p>
 				</div>
 				<div class="post-content">
 					<div class="media-container">

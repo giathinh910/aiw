@@ -13,7 +13,7 @@
 					<h3 class="post-title"><%= post.title %></h3>
 					<p class="meta user"><i class="fa fa-user"></i> Thinh Bui</p>
 					<p class="meta time"><i class="fa fa-clock-o"></i> <%= post.created_at %></p>
-					<p class="meta category"><i class="fa fa-tag"></i> <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+					<p class="meta tag"><i class="fa fa-tag"></i> <%= raw post.tag_list.map { |t| link_to t, tag_path(t) }.join(' ') %></p>
 				</div>
 				<div class="post-content">
 					<div class="media-container">
@@ -25,19 +25,12 @@
 			</article>
 			<% end %>
 			<div class="row">
-				<ul class="gt-pagination">
-					<li class="first"><a href="#page">Đầu</a></li>
-					<li class="prev"><a href="">&larr;</a></li>
-					<li class="active"><a>1</a></li>
-					<li><a href="#page">2</a></li>
-					<li><a href="#page">...</a></li>
-					<li><a href="#page">25</a></li>
-					<li><a href="#page">26</a></li>
-					<li class="next"><a href="#page">&rarr;</a></li>
-					<li class="last"><a href="#page">Cuối</a></li>
-				</ul>
+				<%= will_paginate @articles,
+					:class => "will-paginate",
+					:previous_label => "&larr;",
+					:next_label => "&rarr;"
+				%>
 			</div>
-			<!-- /pagination -->
 		</div>
 		<!-- /posts -->
 	</div>

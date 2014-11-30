@@ -4482,15 +4482,15 @@ h6 {
 
 a {
   text-decoration: none !important;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
   color: #474747;
 }
 a:hover {
-  color: #291E40;
+  color: #BE3B27;
 }
 a:focus {
   text-decoration: none;
@@ -4952,6 +4952,17 @@ iframe {
 #gt-blog .post .post-header .meta {
   color: #999;
 }
+#gt-blog .post .post-header .meta a {
+  color: #999;
+}
+#gt-blog .post .post-header .meta.tag a {
+  background: #999;
+  color: #fff;
+  padding: 0 5px;
+}
+#gt-blog .post .post-header .meta.tag a:hover {
+  background: #555;
+}
 #gt-blog .post .post-content {
   position: relative;
   float: left;
@@ -4985,7 +4996,8 @@ iframe {
 #gt-blog .post .post-content .brief {
   margin-bottom: 15px;
 }
-#gt-blog .gt-pagination {
+#gt-blog .gt-pagination,
+#gt-blog .will-paginate {
   position: relative;
   float: left;
   width: 100%;
@@ -5002,24 +5014,28 @@ iframe {
   padding-right: 15px;
 }
 @media (min-width: 768px) {
-  #gt-blog .gt-pagination {
+  #gt-blog .gt-pagination,
+  #gt-blog .will-paginate {
     float: left;
     width: 66.66667%;
   }
 }
 @media (min-width: 768px) {
-  #gt-blog .gt-pagination {
+  #gt-blog .gt-pagination,
+  #gt-blog .will-paginate {
     margin-left: 33.33333%;
   }
 }
 @media (min-width: 992px) {
-  #gt-blog .gt-pagination {
+  #gt-blog .gt-pagination,
+  #gt-blog .will-paginate {
     float: left;
     width: 75%;
   }
 }
 @media (min-width: 992px) {
-  #gt-blog .gt-pagination {
+  #gt-blog .gt-pagination,
+  #gt-blog .will-paginate {
     margin-left: 25%;
   }
 }
@@ -5226,6 +5242,30 @@ iframe {
   width: auto;
 }
 
+.will-paginate {
+  margin-bottom: 50px;
+}
+.will-paginate a,
+.will-paginate em,
+.will-paginate span {
+  font-style: normal;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: inline-block;
+}
+.will-paginate a:hover,
+.will-paginate em:hover,
+.will-paginate span:hover {
+  background: #999;
+  color: #fff;
+}
+.will-paginate em {
+  background: #291e40 !important;
+  color: #fff;
+}
+
 /* THEMES
 --------------------------------*/
 /* Header
@@ -5234,3 +5274,5 @@ iframe {
 ---------------------------------- */
 /* Footer
 ---------------------------------- */
+
+/*# sourceMappingURL=style.css.map */
