@@ -5263,12 +5263,12 @@ iframe {
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s;
-  color: #474747;
+  color: #777;
 }
 .will-paginate a:hover,
 .will-paginate em:hover,
 .will-paginate span:hover {
-  background: #474747;
+  background: #777;
   color: #fff;
 }
 .will-paginate em {
