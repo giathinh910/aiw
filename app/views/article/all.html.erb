@@ -5,6 +5,11 @@
 		<p class="section-sub-title">Bài viết, tin tức</p>
 	</header>
 
+	<ol class="breadcrumb">
+		<li><a href="/">Trang chủ</a></li>
+		<li><%= link_to "Bài viết", articles_path %></li>
+	</ol>
+
 	<div class="gt-section-content">
 		<div class="posts">
 			<% @articles.each do |post| %>
@@ -20,7 +25,7 @@
 						<img src="<%= post.feature_image %>" alt="">
 					</div>
 					<p class="brief"><%= post.brief %></p>
-					<a href="detail/<%= post.id %>" class="read-more">Đọc tiếp</a>
+					<%= link_to "Đọc tiếp", { :controller => "article", :action => "detail", :id => post }, class: "read-more" %>
 				</div>
 			</article>
 			<% end %>

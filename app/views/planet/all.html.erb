@@ -2,8 +2,13 @@
 
 	<header id="gt-section-header">
 		<h2 class="section-title border"><span>Dữ liệu hệ mặt trời</span></h2>
-		<p class="section-sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi perspiciatis excepturi accusantium nesciunt, pariatur et voluptas vitae sit ad tempore nulla nobis maxime voluptates ratione minima dolor dolores porro consectetur!</p>
+		<p class="section-sub-title">Thông số về các hành tinh và các thành phần liên quan trong hệ mặt trời</p>
 	</header>
+
+	<ol class="breadcrumb">
+		<li><a href="/">Trang chủ</a></li>
+		<li><%= link_to "Dữ liệu hệ mặt trời", planets_path %></li>
+	</ol>
 
 	<div class="gt-section-content">
 		<% @planets.each do |planet| %>
@@ -13,7 +18,7 @@
 					<img src="<%= planet.avatar %>" alt="">
 				</div>
 				<div class="entry-content">
-					<h3 class="title"><a href="planet/<%= planet.id %>" class="gt-button"><%= planet.name %></a></h3>
+					<h3 class="title"><%= link_to planet.name, { :controller => "planet", :action => "detail", :id => planet }, class: "gt-button" %></h3>
 				</div>
 			</div>
 		</div>

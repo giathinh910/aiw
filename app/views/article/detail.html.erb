@@ -2,8 +2,13 @@
 
 	<header id="gt-section-header">
 		<h2 class="section-title border"><span>Bài viết</span></h2>
-		<!-- <p class="section-sub-title"></p> -->
 	</header>
+
+	<ol class="breadcrumb">
+		<li><a href="/">Trang chủ</a></li>
+		<li><%= link_to "Bài viết", articles_path %></li>
+		<li><%= @post.title %></li>
+	</ol>
 
 	<div class="gt-section-content">
 		<div class="posts">

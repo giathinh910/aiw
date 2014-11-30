@@ -2,8 +2,14 @@
 
 	<header id="gt-section-header">
 		<h2 class="section-title border"><span><%= @satellite.name %></span></h2>
-		<p class="section-sub-title">Culpa et voluptatum, aliquam deserunt quibusdam facere odio.</p>
 	</header>
+
+	<ol class="breadcrumb">
+		<li><a href="/">Trang chủ</a></li>
+		<li><%= link_to "Dữ liệu hệ mặt trời", planets_path %></li>
+		<li><%= link_to @satellite.planet.name, { :controller => "planet", :action => "detail", :id => @satellite.planet } %></li>
+		<li><%= @satellite.name %></li>
+	</ol>
 
 	<div class="gt-section-content">
 		<div class="entry-single">
@@ -13,7 +19,7 @@
 					<!-- <caption>Optional table caption.</caption> -->
 					<thead>
 						<tr>
-							<th colspan="2"><strong style="font-weight: bold;">THÔNG SỐ</strong></th>
+							<th colspan="2"><span class="table-title">THÔNG SỐ</span></th>
 						</tr>
 					</thead>
 					<tbody>
