@@ -4951,9 +4951,11 @@ iframe {
 }
 #gt-blog .post .post-header .meta {
   color: #999;
+  font-weight: normal;
 }
 #gt-blog .post .post-header .meta a {
   color: #999;
+  font-weight: normal;
 }
 #gt-blog .post .post-header .meta.tag a {
   background: #999;

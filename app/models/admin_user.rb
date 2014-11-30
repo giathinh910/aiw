@@ -4,4 +4,5 @@ class AdminUser < ActiveRecord::Base
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
   validates_presence_of :email, :password, :password_confirmation, :display_name
+  has_many :articles
 end
