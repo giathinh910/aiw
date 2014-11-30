@@ -2,7 +2,7 @@
 
 	<header id="gt-section-header">
 		<h2 class="section-title border"><span>Bài viết</span></h2>
-		<p class="section-sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi perspiciatis excepturi accusantium nesciunt, pariatur et voluptas vitae sit ad tempore nulla nobis maxime voluptates ratione minima dolor dolores porro consectetur!</p>
+		<p class="section-sub-title">Bài viết, tin tức</p>
 	</header>
 
 	<div class="gt-section-content">
@@ -27,8 +27,8 @@
 			<div class="row">
 				<%= will_paginate @articles,
 					:class => "will-paginate",
-					:previous_label => "&larr;",
-					:next_label => "&rarr;"
+					:previous_label => '<i class="fa fa-chevron-left"></i>',
+					:next_label => '<i class="fa fa-chevron-right"></i>'
 				%>
 			</div>
 		</div>

@@ -4674,7 +4674,7 @@ iframe {
 }
 
 .ht-navbar-toggle {
-  z-index: 100;
+  z-index: 101;
   position: absolute;
   left: 15px;
   top: 15px;
@@ -5244,6 +5244,7 @@ iframe {
 
 .will-paginate {
   margin-bottom: 50px;
+  text-align: right;
 }
 .will-paginate a,
 .will-paginate em,
@@ -5254,11 +5255,17 @@ iframe {
   line-height: 30px;
   text-align: center;
   display: inline-block;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  color: #474747;
 }
 .will-paginate a:hover,
 .will-paginate em:hover,
 .will-paginate span:hover {
-  background: #999;
+  background: #474747;
   color: #fff;
 }
 .will-paginate em {
@@ -5274,5 +5281,3 @@ iframe {
 ---------------------------------- */
 /* Footer
 ---------------------------------- */
-
-/*# sourceMappingURL=style.css.map */
