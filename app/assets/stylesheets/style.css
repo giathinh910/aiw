@@ -4078,7 +4078,7 @@ tbody.collapse.in {
   padding: 8px 15px;
   margin-bottom: 20px;
   list-style: none;
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
   border-radius: 0;
 }
 .breadcrumb > li {
@@ -4414,10 +4414,18 @@ button.close {
 }
 /* UTILS
 --------------------------------*/
-#gt-header .planet-avatar, .star {
+#gt-header .planet-avatar, #gt-features .entry .icon-wrapper, #gt-features .entry .icon-wrapper .icon-inner, #gt-features .entry .icon-wrapper .orbit, #gt-features .entry .icon-wrapper .orbit .orbit-inner:before, .star {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+}
+
+#gt-features .entry .icon-wrapper .orbit {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .foo {
@@ -4445,6 +4453,7 @@ body {
   font-size: 14px;
   font-size: 1.4rem;
   color: #474747;
+  background: #f5f5f5;
 }
 
 h1,
@@ -4645,10 +4654,10 @@ iframe {
   content: '';
   position: absolute;
   z-index: 2;
-  width: 450px;
-  height: 450px;
+  width: 400px;
+  height: 400px;
   bottom: -220px;
-  margin-left: -225px;
+  margin-left: -200px;
   left: 50%;
   background-repeat: no-repeat;
   background-position: center;
@@ -4730,12 +4739,12 @@ iframe {
 ---------------------------------- */
 .gt-section {
   position: relative;
-  background: #fff;
+  margin-bottom: 50px;
 }
 
 #gt-section-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   overflow: hidden;
 }
 #gt-section-header .section-title {
@@ -4776,7 +4785,7 @@ iframe {
 
 #gt-features {
   overflow: hidden;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 #gt-features .entry {
   position: relative;
@@ -4799,80 +4808,92 @@ iframe {
   }
 }
 #gt-features .entry .icon-wrapper {
+  position: relative;
   display: block;
-  margin-bottom: 65px !important;
-  margin: 50px auto;
+  margin: 50px auto 30px;
+  width: 180px;
+  height: 180px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  transition: 0.5s;
 }
-#gt-features .entry .icon-wrapper .fa {
+#gt-features .entry .icon-wrapper .icon-inner {
+  width: 120px;
+  height: 120px;
+}
+#gt-features .entry .icon-wrapper .icon-inner .fa {
   font-size: 60px;
+  line-height: 120px;
   color: #fff;
-  line-height: 92px;
 }
-#gt-features .entry .icon-wrapper.facts {
-  width: 160px;
-  height: 94px;
-  position: relative;
-  background-color: #3b0d31;
-}
-#gt-features .entry .icon-wrapper.facts:before, #gt-features .entry .icon-wrapper.facts:after {
-  content: "";
+#gt-features .entry .icon-wrapper .orbit {
+  width: 100%;
+  height: 100%;
   position: absolute;
+  top: 0;
   left: 0;
-  width: 0;
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
 }
-#gt-features .entry .icon-wrapper.facts:before {
-  bottom: 100%;
-  border-bottom: 49.35585px solid #3b0d31;
-}
-#gt-features .entry .icon-wrapper.facts:after {
-  top: 100%;
-  border-top: 49.35585px solid #3b0d31;
-}
-#gt-features .entry .icon-wrapper.posts {
-  width: 160px;
-  height: 94px;
+#gt-features .entry .icon-wrapper .orbit .orbit-inner {
   position: relative;
-  background-color: #611a52;
 }
-#gt-features .entry .icon-wrapper.posts:before, #gt-features .entry .icon-wrapper.posts:after {
-  content: "";
+#gt-features .entry .icon-wrapper .orbit .orbit-inner:before {
+  content: '';
+  display: block;
   position: absolute;
-  left: 0;
-  width: 0;
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
+  top: 21px;
+  left: 21px;
+  width: 100%;
+  height: 100%;
+  width: 10px;
+  height: 10px;
+  background: #777;
 }
-#gt-features .entry .icon-wrapper.posts:before {
-  bottom: 100%;
-  border-bottom: 49.35585px solid #611a52;
+#gt-features .entry .icon-wrapper.facts .icon-inner {
+  background: #3b0d31;
 }
-#gt-features .entry .icon-wrapper.posts:after {
-  top: 100%;
-  border-top: 49.35585px solid #611a52;
+#gt-features .entry .icon-wrapper.facts .orbit {
+  animation-duration: 2s;
+  -webkit-animation-duration: 2s;
 }
-#gt-features .entry .icon-wrapper.about {
-  width: 160px;
-  height: 94px;
-  position: relative;
-  background-color: #be3f74;
+#gt-features .entry .icon-wrapper.facts .orbit-inner:before {
+  background: #3b0d31;
 }
-#gt-features .entry .icon-wrapper.about:before, #gt-features .entry .icon-wrapper.about:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  border-left: 80px solid transparent;
-  border-right: 80px solid transparent;
+#gt-features .entry .icon-wrapper.facts:hover {
+  border-color: #3b0d31;
 }
-#gt-features .entry .icon-wrapper.about:before {
-  bottom: 100%;
-  border-bottom: 49.35585px solid #be3f74;
+#gt-features .entry .icon-wrapper.posts .icon-inner {
+  background: #611a52;
 }
-#gt-features .entry .icon-wrapper.about:after {
-  top: 100%;
-  border-top: 49.35585px solid #be3f74;
+#gt-features .entry .icon-wrapper.posts .orbit {
+  animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+}
+#gt-features .entry .icon-wrapper.posts .orbit-inner:before {
+  background: #611a52;
+}
+#gt-features .entry .icon-wrapper.posts:hover {
+  border-color: #611a52;
+}
+#gt-features .entry .icon-wrapper.about .icon-inner {
+  background: #be3f74;
+}
+#gt-features .entry .icon-wrapper.about .orbit {
+  animation-duration: 4s;
+  -webkit-animation-duration: 4s;
+}
+#gt-features .entry .icon-wrapper.about .orbit-inner:before {
+  background: #be3f74;
+}
+#gt-features .entry .icon-wrapper.about:hover {
+  border-color: #be3f74;
+}
+#gt-features .entry h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
 }
 
 #gt-blog .gt-section-content {
@@ -5042,9 +5063,6 @@ iframe {
   }
 }
 
-#gt-fact {
-  margin-bottom: 20px;
-}
 #gt-fact .gt-section-content {
   margin-left: -15px;
   margin-right: -15px;
@@ -5278,6 +5296,32 @@ iframe {
   color: #fff;
 }
 
+@-webkit-keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+#gt-features .entry .icon-wrapper .orbit {
+  -webkit-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+/* Bootstrap override */
+.breadcrumb {
+  margin-bottom: 30px;
+}
+
 /* THEMES
 --------------------------------*/
 /* Header
@@ -5286,3 +5330,4 @@ iframe {
 ---------------------------------- */
 /* Footer
 ---------------------------------- */
+

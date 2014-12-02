@@ -72,6 +72,7 @@
 	$(document).ready( function() {
 		GIATHINH.navigation();
 		GIATHINH.parallaxStar();
+		$('body').first().remove();
 	});
 
 	$(window).load( function() {
