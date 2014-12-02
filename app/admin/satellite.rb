@@ -24,12 +24,13 @@ ActiveAdmin.register Satellite do
 
   form do |f|
     f.inputs "Chi tiết hành tinh" do
+      f.input :planet, :hint => 'Belongs to which planet?'
       f.input :name
       f.input :year_discovered
-      f.input :discoverer
+      f.input :discoverer, :hint => 'Name of person who discovered it?'
       f.input :distance_from_planet
-      f.input :orbital_period
-      f.input :avatar
+      f.input :orbital_period, :hint => 'Time of for it finish a self-turning period'
+      f.input :avatar, :hint => 'Should using the png format'
       f.input :detail, :as => :ckeditor
     end
     f.actions

@@ -25,11 +25,11 @@ ActiveAdmin.register Article do
 
   form do |f|
     f.inputs "Chi tiết hành tinh" do
-      f.input :title
-      f.input :feature_image
-      f.input :brief
+      f.input :title, :hint => 'Title'
+      f.input :feature_image, :hint => 'Image respresent for an article'
+      f.input :brief, :hint => 'Introduce about article', :as => :text
       f.input :tag_list, :hint => 'Comma separated'
-      f.input :admin_user
+      f.input :admin_user, :label => 'Author', :hint=> 'Pick your name, will be display as author'
       f.input :content, :as => :ckeditor
     end
     f.actions

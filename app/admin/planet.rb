@@ -43,9 +43,9 @@ permit_params :name, :mass, :diameter, :density, :gravity, :escape_velocity, :ro
       f.input :temperature
       f.input :surface_pressure
       f.input :atmospheric_composition
-      f.input :satellite
-      f.input :ring
-      f.input :avatar
+      f.input :satellite, :hint => 'How many satellite does it have?'
+      f.input :ring, :hint => 'Does it have a ring around?'
+      f.input :avatar, :hint => 'Should using png format'
       f.input :detail, :as => :ckeditor
     end
     f.actions
