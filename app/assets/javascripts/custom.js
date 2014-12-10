@@ -15,25 +15,13 @@
 		$('.ht-navbar-toggle').on('click', function(){
 
 			var target = $($(this).data('target'));
-
-			var navBarAnimate = function(rangeLeft,speed) {
-				target.stop().animate(
-					{
-						left: rangeLeft,
-					},
-					speed,
-					function() {}
-				)
-			}
-
+			var state = target.css('display');
 			$(this).toggleClass('is-open');
 
-			if (target.hasClass('is-open')) {
-				navBarAnimate(-330,200);
-				target.removeClass('is-open');
+			if (state === "block") {
+				target.slideUp();
 			} else {
-				navBarAnimate(0,200);
-				target.addClass('is-open');
+				target.slideDown();
 			}
 		})
 	}
@@ -69,10 +57,18 @@
 		target1.parallax();
 	}
 
+	GIATHINH.stickyNav = function() {
+		var toTop = $('#gt-main-nav').offset().top;
+		if (toTop > 0) {
+			$('#gt-main-nav').addClass('sticky');
+		} else {
+			$('#gt-main-nav').removeClass('sticky');
+		}
+	}
+
 	$(document).ready( function() {
 		GIATHINH.navigation();
 		GIATHINH.parallaxStar();
-		$('body').first().remove();
 	});
 
 	$(window).load( function() {
@@ -80,5 +76,9 @@
 
 	$(window).on( 'resize', function() {
 	});
+
+	$(window).on('scroll', function() {
+		GIATHINH.stickyNav();
+	})
 
 })(jQuery); // EOF

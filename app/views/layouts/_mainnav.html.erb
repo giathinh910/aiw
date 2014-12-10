@@ -1,16 +1,19 @@
 <nav id="gt-main-nav">
-
-	<div class="nav-title"><span>Menu</span></div>
-
-	<form class="search" action="">
-		<input type="text">
-		<button type="submit"><i class="fa fa-search"></i></button>
-	</form>
-	
-	<ul class="main-nav">
-		<li><a href="/">Trang chủ</a></li>
-		<li><%= link_to "Dữ liệu hệ mặt trời", planets_path %></li>
-		<li><%= link_to "Bài viết", articles_path %></li>
-		<li><a href="">Giới thiệu</a></li>
-	</ul>
+	<div class="container">
+		<div class="row">
+			<div class="nav-title"><a href="#">ASTRONOMY</a></div>
+			<ul class="main-nav" id="main-nav">
+				<li><a href="/">Trang chủ</a></li>
+				<li><%= link_to "Hành tinh", planets_path %></li>
+				<li><%= link_to "Bài viết", articles_path %></li>
+				<li><a href="">Giới thiệu</a></li>
+			</ul>
+			<button type="button" class="ht-navbar-toggle" data-target="#main-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar icon-bar-1"></span>
+				<span class="icon-bar icon-bar-2"></span>
+				<span class="icon-bar icon-bar-3"></span>
+			</button>
+		</div>
+	</div>
 </nav>
