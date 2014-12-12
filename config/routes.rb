@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'data/planets' => 'data#planets'
+  get 'data/query' => 'data#query', :as => :query
 
   get 'tags/:tag' => 'article#all', as: :tag
   get 'articles' => 'article#all'
