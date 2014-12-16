@@ -1,8 +1,12 @@
+<header id="gt-header" class="<%= @header %>">
+	<h1 class="site-title"><a href="#<%= @satellite.name %>"><%= @satellite.name %></a></h1>
+</header>
+
 <section id="gt-fact" class="gt-section">
 
-	<header id="gt-section-header">
-		<h2 class="section-title border"><span><%= @satellite.name %></span></h2>
-	</header>
+	<div class="planet-avatar">
+		<img src="<%= @satellite.avatar %>" alt="">
+	</div>
 
 	<ol class="breadcrumb">
 		<li><a href="/">Trang chủ</a></li>
