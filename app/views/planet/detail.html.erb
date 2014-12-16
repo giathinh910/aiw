@@ -1,8 +1,12 @@
+<header id="gt-header" class="<%= @header %>">
+	<h1 class="site-title"><a href="#<%= @planet.name %>"><%= @planet.name %></a></h1>
+</header>
+
 <section id="gt-fact" class="gt-section">
 
-	<header id="gt-section-header">
-		<h2 class="section-title border"><span><%= @planet.name %></span></h2>
-	</header>
+	<div class="planet-avatar">
+		<img src="<%= @planet.avatar %>" alt="">
+	</div>
 
 	<ol class="breadcrumb">
 		<li><a href="/">Trang chủ</a></li>

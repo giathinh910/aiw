@@ -34,7 +34,7 @@
 				width = target.width(),
 				height = target.height();
 			
-			for (i = 1; i <= 150; i++) {
+			for (i = 1; i <= 60; i++) {
 				size = Math.ceil(1*Math.random());
 				target.append('<div class="layer star" data-depth="0.20" style="top: ' + Math.round(height*Math.random()) + 'px; left: ' + Math.round(width*Math.random()) + 'px; width: ' + size + 'px; height: ' + size + 'px;"></div>');
 			}
@@ -52,9 +52,9 @@
 			}
 		}
 
-		var target1 = $('#gt-header');
+		var target1 = $('#gt-header.planet');
 		createStars(target1);
-		target1.parallax();
+		// target1.parallax();
 	}
 
 	GIATHINH.stickyNav = function() {
@@ -68,7 +68,8 @@
 
 	$(document).ready( function() {
 		GIATHINH.navigation();
-		GIATHINH.parallaxStar();
+		// GIATHINH.parallaxStar();
+		$('body').first().remove();
 	});
 
 	$(window).load( function() {

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @planet_avatar = "background-image: url(http://localhost/public/astronomy/planet-5.png); box-shadow: 0px 0px 100px rgba(90, 137, 147, 1)"
+    @nav_active = "home"
   end
 
   def categories

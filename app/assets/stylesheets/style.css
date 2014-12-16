@@ -1682,31 +1682,31 @@ pre code {
   overflow-y: scroll;
 }
 
-.container, #gt-features, #gt-blog, #gt-fact {
+.container, #gt-blog, #gt-fact {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-.container:before, #gt-features:before, #gt-blog:before, #gt-fact:before, .container:after, #gt-features:after, #gt-blog:after, #gt-fact:after {
+.container:before, #gt-blog:before, #gt-fact:before, .container:after, #gt-blog:after, #gt-fact:after {
   content: " ";
   display: table;
 }
-.container:after, #gt-features:after, #gt-blog:after, #gt-fact:after {
+.container:after, #gt-blog:after, #gt-fact:after {
   clear: both;
 }
 @media (min-width: 768px) {
-  .container, #gt-features, #gt-blog, #gt-fact {
+  .container, #gt-blog, #gt-fact {
     width: 750px;
   }
 }
 @media (min-width: 992px) {
-  .container, #gt-features, #gt-blog, #gt-fact {
+  .container, #gt-blog, #gt-fact {
     width: 970px;
   }
 }
 @media (min-width: 1200px) {
-  .container, #gt-features, #gt-blog, #gt-fact {
+  .container, #gt-blog, #gt-fact {
     width: 1200px;
   }
 }
@@ -3122,7 +3122,7 @@ table th[class*="col-"] {
 }
 /* UTILS
 --------------------------------*/
-#gt-header .planet-avatar, #gt-features .entry .icon-wrapper, #gt-features .entry .icon-wrapper .icon-inner, #gt-features .entry .icon-wrapper .orbit, #gt-features .entry .icon-wrapper .orbit .orbit-inner:before, .star {
+#gt-features .entry .icon-wrapper, #gt-features .entry .icon-wrapper .icon-inner, #gt-features .entry .icon-wrapper .orbit, #gt-features .entry .icon-wrapper .orbit .orbit-inner:before, #gt-fact .planet-avatar, #gt-footer .social li a, .star {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -3134,6 +3134,14 @@ table th[class*="col-"] {
   -ms-transform: translateZ(0);
   -o-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+#gt-header:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* BASE
@@ -3274,16 +3282,15 @@ iframe {
   top: 0;
   left: 0;
   z-index: 100;
-  color: #555;
   font-family: 'Heading';
-  background: #fff;
+  background: #291E40;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   -ms-transition: 0.3s;
   transition: 0.3s;
 }
-#gt-main-nav .container, #gt-main-nav #gt-features, #gt-main-nav #gt-blog, #gt-main-nav #gt-fact {
+#gt-main-nav .container, #gt-main-nav #gt-blog, #gt-main-nav #gt-fact {
   position: relative;
 }
 #gt-main-nav .nav-title {
@@ -3303,6 +3310,7 @@ iframe {
 }
 #gt-main-nav .nav-title a {
   line-height: 60px;
+  color: white;
 }
 #gt-main-nav .main-nav {
   margin: 0;
@@ -3335,6 +3343,13 @@ iframe {
   text-transform: uppercase;
   font-size: 16px;
   font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+#gt-main-nav .main-nav li a:hover {
+  color: white;
+}
+#gt-main-nav .main-nav li.active a {
+  color: white;
 }
 @media (max-width: 767px) {
   #gt-main-nav .nav-title {
@@ -3349,6 +3364,11 @@ iframe {
   #gt-main-nav .main-nav li {
     display: block;
     margin-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  #gt-main-nav .main-nav {
+    display: block !important;
   }
 }
 @media (min-width: 768px) {
@@ -3370,7 +3390,7 @@ iframe {
   z-index: 101;
   position: absolute;
   right: 15px;
-  top: 10px;
+  top: 14px;
   border: none;
   background-color: transparent;
   background-image: none;
@@ -3398,7 +3418,7 @@ iframe {
   display: block;
   width: 30px;
   height: 4px;
-  background-color: #555;
+  background-color: rgba(255, 255, 255, 0.3);
   margin: 5px 0;
   position: relative;
   top: 0;
@@ -3425,52 +3445,54 @@ iframe {
 ---------------------------------- */
 #gt-header {
   position: relative;
-  height: 550px;
-  margin-bottom: 50px;
-  background: #291E40;
-  overflow: hidden;
+  padding-top: 100px;
+  height: 500px;
+  background: url("../images/cute-planets-funny.jpg") center bottom no-repeat;
+  background-size: cover;
   text-align: center;
   color: #fff;
   transform: initial !important;
   transform-style: initial !important;
 }
-#gt-header .planet-avatar {
+#gt-header:before {
   content: '';
-  position: absolute;
-  z-index: 2;
-  width: 400px;
-  height: 400px;
-  bottom: -220px;
-  margin-left: -200px;
-  left: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  box-shadow: 0px 0px 100px rgba(255, 152, 48, 0.5);
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
-#gt-header .site-title {
-  display: inline-block;
-  margin-top: 200px;
+#gt-header * {
+  position: relative;
+  z-index: 2;
 }
 #gt-header .site-title a {
-  border: 3px solid #fff;
-  padding: 0 10px;
+  border: 5px solid #fff;
+  padding: 5px 15px;
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 40px;
   color: #fff;
 }
 #gt-header .site-title a:hover {
   background: #fff;
-  color: #291E40 !important;
+  color: #474747 !important;
 }
 #gt-header .sub-site-title {
   margin-top: 15px;
+}
+#gt-header.planet {
+  background: url(../images/slat_space.jpg) center center;
+  background-size: cover;
+  height: 400px;
+  margin-bottom: 50px;
+}
+#gt-header.planet-detail {
+  background: url(../images/city-at-night-footer.png) center center;
+  background-size: cover;
+  height: 370px;
 }
 
 /* Section
 ---------------------------------- */
 .gt-section {
   position: relative;
-  margin-bottom: 50px;
 }
 
 #gt-section-header {
@@ -3486,7 +3508,7 @@ iframe {
   font-size: 2.4rem;
   white-space: nowrap;
   border: 3px solid;
-  padding: 0 10px;
+  padding: 0 15px;
   font-family: 'Heading';
   display: inline-block;
 }
@@ -3516,7 +3538,10 @@ iframe {
 
 #gt-features {
   overflow: hidden;
-  margin-bottom: 80px;
+}
+#gt-features .gt-section-content {
+  position: relative;
+  padding: 50px 0 100px;
 }
 #gt-features .entry {
   position: relative;
@@ -3670,21 +3695,11 @@ iframe {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 @media (min-width: 768px) {
   #gt-blog .post .post-header {
     float: left;
     width: 33.33333%;
-  }
-}
-@media (min-width: 992px) {
-  #gt-blog .post .post-header {
-    float: left;
-    width: 25%;
   }
 }
 #gt-blog .post .post-header .post-title {
@@ -3699,7 +3714,7 @@ iframe {
   left: 0;
   width: 100px;
   height: 1px;
-  background: #474747;
+  background: #C3C3C3;
 }
 #gt-blog .post .post-header .meta {
   color: #999;
@@ -3728,22 +3743,12 @@ iframe {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
   line-height: 1.5;
 }
 @media (min-width: 768px) {
   #gt-blog .post .post-content {
     float: left;
     width: 66.66667%;
-  }
-}
-@media (min-width: 992px) {
-  #gt-blog .post .post-content {
-    float: left;
-    width: 75%;
   }
 }
 #gt-blog .post .post-content .media-container,
@@ -3755,10 +3760,6 @@ iframe {
   position: relative;
   float: left;
   width: 100%;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -3780,20 +3781,19 @@ iframe {
     margin-left: 33.33333%;
   }
 }
-@media (min-width: 992px) {
-  #gt-blog .gt-pagination,
-  #gt-blog .will-paginate {
-    float: left;
-    width: 75%;
-  }
-}
-@media (min-width: 992px) {
-  #gt-blog .gt-pagination,
-  #gt-blog .will-paginate {
-    margin-left: 25%;
-  }
-}
 
+#gt-fact {
+  margin-bottom: 50px;
+}
+#gt-fact .planet-avatar {
+  background: #F5F5F5;
+  z-index: 2;
+  padding: 10px;
+  width: 250px;
+  height: 250px;
+  margin: -125px auto 30px;
+  position: relative;
+}
 #gt-fact .gt-section-content {
   margin-left: -15px;
   margin-right: -15px;
@@ -3876,14 +3876,58 @@ iframe {
   font-family: 'Heading', sans-serif;
 }
 
+#gt-text {
+  background: #291E40;
+  padding: 50px 0;
+  color: #fff;
+  text-align: center;
+}
+#gt-text .section-title {
+  margin-bottom: 25px;
+}
+#gt-text .section-title span {
+  font-size: 24px;
+  font-size: 2.4rem;
+  white-space: nowrap;
+  border: 3px solid;
+  padding: 0 10px;
+  font-family: 'Heading';
+  display: inline-block;
+}
+#gt-text p {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 25px;
+}
+@media (min-width: 768px) {
+  #gt-text p {
+    float: left;
+    width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  #gt-text p {
+    margin-left: 25%;
+  }
+}
+
 /* Footer
 ---------------------------------- */
 #gt-footer {
   position: relative;
-  background: #291e40;
-  padding: 30px 0;
+  padding: 80px 0;
   text-align: center;
   overflow: hidden;
+  background: url("../images/city-at-night-footer.png") center bottom no-repeat;
+  background-size: cover;
 }
 #gt-footer p {
   margin-bottom: 0;
@@ -3892,34 +3936,20 @@ iframe {
   margin: 30px 0;
 }
 #gt-footer .social li {
-  width: 48px;
-  height: 28px;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.1);
   text-align: center;
   display: inline-block;
   margin: 0 5px;
 }
-#gt-footer .social li:before, #gt-footer .social li:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 0;
-  border-left: 24px solid transparent;
-  border-right: 24px solid transparent;
-}
-#gt-footer .social li:before {
-  bottom: 100%;
-  border-bottom: sqrt(208)px solid rgba(255, 255, 255, 0.1);
-}
-#gt-footer .social li:after {
-  top: 100%;
-  border-top: sqrt(208)px solid rgba(255, 255, 255, 0.1);
-}
 #gt-footer .social li a {
   color: #fff !important;
   display: block;
-  line-height: 30px;
+  line-height: 50px;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+}
+#gt-footer .social li a:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 #gt-footer .copyright {
   color: #fff;
