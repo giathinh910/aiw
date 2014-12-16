@@ -24,7 +24,7 @@
 				<li class="<%= @is_home %>"><a href="/">Trang chủ</a></li>
 				<li class="<%= @is_planet %>"><%= link_to "Hành tinh", planets_path %></li>
 				<li class="<%= @is_article %>"><%= link_to "Bài viết", articles_path %></li>
-				<li class="<%= @is_about %>"><a href="">Giới thiệu</a></li>
+				<li class="<%= @is_about %>"><%= link_to "Thông tin", {:controller => "about", :action => "index" }%></li>
 			</ul>
 			<button type="button" class="ht-navbar-toggle" data-target="#main-nav">
 				<span class="sr-only">Toggle navigation</span>

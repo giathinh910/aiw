@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'about' => 'about#index'
+
   get 'data/query' => 'data#query', :as => :query
 
   get 'tags/:tag' => 'article#all', as: :tag
