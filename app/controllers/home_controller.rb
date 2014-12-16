@@ -3,19 +3,7 @@ class HomeController < ApplicationController
     @nav_active = "home"
   end
 
-  def categories
-
-  end
-
-  def details
-
-  end
-
-  def search
-
-  end
-
-  def sample
-    
+  def service
+    @nav_active = "service"
   end
 end

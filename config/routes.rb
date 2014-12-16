@@ -14,8 +14,10 @@ Rails.application.routes.draw do
   get 'planet/:id' => 'planet#detail'
   get 'planet/satellite/:id' => 'satellite#detail'
 
-  root 'home#index'
   get 'home/index'
+  get 'home/service'
+
+  root 'home#index'
 
   mount Ckeditor::Engine => '/ckeditor'
 
