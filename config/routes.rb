@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'about' => 'about#index'
+  get 'about' => 'about#index', :as => 'author'
 
   get 'data/query' => 'data#query', :as => :query
 
