@@ -72,7 +72,10 @@
 		$('body').first().remove();
 	});
 
-	$(window).load( function() {
+	$(window).on('load', function() {
+		$('.preloader').fadeOut(500, function() {
+			$(this).remove;
+		});
 	});
 
 	$(window).on( 'resize', function() {
