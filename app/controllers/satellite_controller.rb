@@ -1,7 +1,7 @@
 class SatelliteController < ApplicationController
-  def detail
+  def all
   	@nav_active = "planet"
   	@header = "planet"
-  	@satellite = Satellite.find(params[:id])
+  	@planet = Planet.find(params[:id])
   end
 end

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get 'planets' => 'planet#all'
   get 'planet/:id' => 'planet#detail'
-  get 'planet/satellite/:id' => 'satellite#detail'
+  get 'planet/:id/satellite' => 'satellite#all'
 
   get 'home/index'
   get 'home/service'
