@@ -3,6 +3,6 @@ class AdminUser < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, 
          :recoverable, :rememberable, :trackable, :validatable
-  validates_presence_of :email, :password, :password_confirmation, :display_name
+  validates_presence_of :email, :password, :password_confirmation
   has_many :articles
 end
