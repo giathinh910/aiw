@@ -4,9 +4,9 @@ class ArticleController < ApplicationController
       @header = "article"
   	@planet_avatar = "background-image: url(http://localhost/public/astronomy/planet-6.png); box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.5)"
   	if params[:tag]
-  		@articles = Article.paginate(:page => params[:page], :per_page => 2).tagged_with(params[:tag])
+  		@articles = Article.paginate(:page => params[:page], :per_page => 5).tagged_with(params[:tag])
   	else
-  		@articles = Article.paginate(:page => params[:page], :per_page => 2)
+  		@articles = Article.paginate(:page => params[:page], :per_page => 5)
   	end
   end
 
