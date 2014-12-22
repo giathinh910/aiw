@@ -1,0 +1,49 @@
+<header id="gt-header" class="<%= @header %>">
+	<h1 class="site-title"><a href="#<%= @planet.name %>">VỆ TINH: <%= @planet.name %></a></h1>
+</header>
+
+<section id="gt-fact" class="gt-section">
+
+	<div class="planet-avatar">
+		<img src="<%= @planet.avatar %>" alt="">
+	</div>
+
+	<ol class="breadcrumb">
+		<li><a href="/">Trang chủ</a></li>
+		<li><%= link_to "Dữ liệu hệ mặt trời", planets_path %></li>
+		<li><%= link_to @planet.name, { :controller => "planet", :action => "detail", :id => @planet } %></li>
+		<li>Vệ tinh</li>
+	</ol>
+
+	<div class="gt-section-content">
+		<div class="entry-single">
+			<div class="col-xs-12">
+				<div class="table-responsive">
+					<table class="table">
+					<!-- <caption>Optional table caption.</caption> -->
+					<thead>
+						<tr>
+							<td>Tên gọi</td>
+							<td>Năm phát hiện</td>
+							<td>Người phát hiện</td>
+							<td>K/c tới hành tinh</td>
+							<td>Chu kì tự quay</td>
+						</tr>
+					</thead>
+					<tbody>
+						<% @planet.satellites.each do |satellite| %>
+							<tr>
+								<td><%= satellite.name %></td>
+								<td><%= satellite.year_discovered %></td>
+								<td><%= satellite.discoverer %></td>
+								<td><%= satellite.distance_from_planet %></td>
+								<td><%= satellite.orbital_period %></td>
+							</tr>
+						<% end %>
+					</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
